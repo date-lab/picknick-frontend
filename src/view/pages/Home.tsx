@@ -1,5 +1,8 @@
+import { useState } from "react";
+import Splash from "view/components/Splash";
+
 const Home = () => {
-  return <div>라우터 페이지</div>;
+  return <div>홈</div>;
 };
 
 export default Home;
