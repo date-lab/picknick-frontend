@@ -1,22 +1,6 @@
-import React from "react"
-import styled from 'styled-components';
-
+import React from "react";
 
 const Index: React.FC = () => {
-    return (
-        <Wrapper>
-            afaf
-        </Wrapper>
-    )
-}
-
-const Wrapper = styled.div`
-    width: 100%;
-    height: 100%;
-    background-color: #DDDDDD;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
-
+  return <div>컴포넌트</div>;
+};
 export default Index;
