@@ -11,7 +11,12 @@ const Home = () => {
 
   if (splash) return <Splash />;
 
-  return <div>홈</div>;
+  return (
+    <div>
+      홈
+      <NavBar />
+    </div>
+  );
 };
 
 export default Home;

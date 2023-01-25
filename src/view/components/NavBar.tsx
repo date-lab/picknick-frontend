@@ -1,5 +1,11 @@
+import { NavBarWrap } from "../components/NavBarCSS";
+
 const NavBar = () => {
-  return <div>하단 네브바</div>;
+  return (
+    <NavBarWrap>
+      <div></div>
+    </NavBarWrap>
+  );
 };
 
 export default NavBar;
