@@ -12,7 +12,7 @@ export const LoginHeader = styled.div`
   height: 97vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -44,21 +44,18 @@ export const LoginHeaderLogoImg = styled.div`
 
 export const LogoImg1 = styled.img`
   position: relative;
-  left: 90px;
-  bottom: 166px;
+  left: 102px;
+  top: 70px;
 `;
 export const LogoImg2 = styled.img`
   position: relative;
   left: 40px;
-  bottom: 100px;
+  top: 140px;
 `;
 
-export const Test = styled.div`
-  width: 100%;
-  height: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: end;
+export const KaKaoLoginWrap = styled.div`
+  position: relative;
+  bottom: 60px;
 `;
 
 export const KakaoLoginBtn = styled.div`

@@ -1,5 +1,4 @@
 import {
-  Test,
   LoginWrap,
   LoginHeader,
   LoginHeaderTitle,
@@ -9,6 +8,7 @@ import {
   LoginHeaderLogoImg,
   LogoImg1,
   LogoImg2,
+  KaKaoLoginWrap,
   KakaoLoginBtn,
 } from "../pages/LoginCSS";
 import LoginLogo1 from "../assets/LoginLogo1.png";
@@ -27,9 +27,9 @@ const Login = () => {
           <LogoImg1 src={LoginLogo1} />
           <LogoImg2 src={LoginLogo2} />
         </LoginHeaderLogoImg>
-        <Test>
+        <KaKaoLoginWrap>
           <KakaoLoginBtn onClick={() => alert("카카오로그인 기능 구현중")}>카카오 로그인</KakaoLoginBtn>
-        </Test>
+        </KaKaoLoginWrap>
       </LoginHeader>
     </LoginWrap>
   );
