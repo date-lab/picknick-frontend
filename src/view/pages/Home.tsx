@@ -6,8 +6,10 @@ const Home = () => {
 
   setTimeout(() => {
     setSplash(false);
-  }, 1000);
+  }, 2000);
+
   if (splash) return <Splash />;
+
   return <div>홈</div>;
 };
 

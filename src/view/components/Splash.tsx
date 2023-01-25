@@ -1,10 +1,12 @@
+import react from "react";
 import Logo from "../assets/logo.png";
+import { ImgWrap, SplashImg } from "../components/SplashCSS";
 
 const Splash = () => {
   return (
-    <div>
-      <img src={Logo} />
-    </div>
+    <ImgWrap>
+      <SplashImg src={Logo} />
+    </ImgWrap>
   );
 };
 
