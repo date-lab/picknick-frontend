@@ -11,4 +11,27 @@ export const NavBarWrap = styled.div`
   font-size: 27px;
   position: fixed;
   bottom: 0;
+
+  .home {
+    font-size: 37px;
+  }
+
+  .people {
+    font-size: 35px;
+  }
+
+  .home,
+  .trash,
+  .bookmark,
+  .people {
+    cursor: pointer;
+  }
+
+  .active {
+    color: #f46e46;
+  }
+`;
+
+export const HomeBtn = styled.button`
+  background-color: white;
 `;

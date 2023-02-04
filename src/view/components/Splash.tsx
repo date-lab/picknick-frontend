@@ -1,4 +1,3 @@
-import react from "react";
 import Logo from "../assets/logo.png";
 import { ImgWrap, SplashImg } from "../components/SplashCSS";
 
