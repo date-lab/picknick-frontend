@@ -1,4 +1,4 @@
-import { NavBarWrap } from "../components/NavBarCSS";
+import { NavBarWrap } from "./NavBarCSS";
 import { MdHomeFilled } from "react-icons/md";
 import { FaTrash } from "react-icons/fa";
 import { BsBookmarkFill } from "react-icons/bs";

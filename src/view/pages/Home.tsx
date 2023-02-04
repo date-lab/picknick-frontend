@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Splash from "../components/Splash";
-import NavBar from "../components/NavBar";
+import NavBar from "../layouts/NavBarLayout";
 import { HomeWrap } from "../pages/HomeCSS";
 
 const Home = () => {
