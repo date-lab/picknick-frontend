@@ -6,12 +6,14 @@ export const SearchWrap = styled.div`
   justify-content: center;
   position: absolute;
   margin-top: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 `;
 
 export const SearchIcon = styled.span`
   position: relative;
-  left: 30px;
   top: 9px;
+  cursor: pointer;
 `;
 
 export const SearchInput = styled.input`
@@ -20,6 +22,7 @@ export const SearchInput = styled.input`
   border-radius: 10px;
   border: none;
   padding-left: 37px;
+  padding-right: 37px;
   box-sizing: border-box;
   font-size: 13px;
   &::placeholder {

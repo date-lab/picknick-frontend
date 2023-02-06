@@ -6,8 +6,9 @@ import Splash from "../components/Splash";
 import MapLocation from "../components/MapLocation";
 
 // Layouts
-import NavBar from "../layouts/NavBarLayout";
 import SearchLayout from "../layouts/SearchLayout";
+
+import NavBar from "../layouts/NavBarLayout";
 
 const Home = () => {
   const [splash, setSplash] = useState<boolean>(true);
@@ -21,6 +22,7 @@ const Home = () => {
   return (
     <HomeWrap>
       <SearchLayout />
+
       <MapLocation />
       <NavBar />
     </HomeWrap>
