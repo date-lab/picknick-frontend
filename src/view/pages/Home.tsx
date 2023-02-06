@@ -7,7 +7,7 @@ import MapLocation from "../components/MapLocation";
 
 // Layouts
 import SearchLayout from "../layouts/SearchLayout";
-
+import SettingLayout from "../layouts/SettingLayout";
 import NavBar from "../layouts/NavBarLayout";
 
 const Home = () => {
@@ -24,6 +24,7 @@ const Home = () => {
       <SearchLayout />
 
       <MapLocation />
+      <SettingLayout />
       <NavBar />
     </HomeWrap>
   );
