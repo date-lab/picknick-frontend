@@ -6,12 +6,13 @@ export const SearchWrap = styled.div`
   justify-content: center;
   position: absolute;
   margin-top: 20px;
-  padding-right: 20px;
+  padding-right: 17px;
   box-sizing: border-box;
 `;
 
 export const SearchIcon = styled.span`
   position: relative;
+  left: 25px;
   top: 9px;
   cursor: pointer;
 `;
