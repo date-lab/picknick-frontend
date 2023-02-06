@@ -4,7 +4,6 @@ export const KeyWrodWrap = styled.div`
   width: 100%;
   height: 35px;
   position: absolute;
-  background-color: brown;
   top: 70px;
   display: flex;
   align-items: center;
@@ -16,7 +15,6 @@ export const KeyWordItems = styled.div`
   width: 100%;
   height: inherit;
   display: flex;
-  background-color: teal;
   overflow: auto;
   cursor: pointer;
   &::-webkit-scrollbar {
