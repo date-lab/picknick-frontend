@@ -1,15 +1,22 @@
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 
 const Router = () => {
+  const [login, setLogin] = useState(true);
   return (
     <div>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
+        {login ? (
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Login />} />
+          </Routes>
+        )}
       </BrowserRouter>
     </div>
   );

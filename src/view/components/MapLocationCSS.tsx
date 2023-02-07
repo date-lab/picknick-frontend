@@ -5,7 +5,6 @@ export const MapWrap = styled.div`
   height: 100vh;
   font-size: 22px;
   font-weigth: bold;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;

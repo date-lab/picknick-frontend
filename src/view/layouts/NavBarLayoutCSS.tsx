@@ -11,6 +11,7 @@ export const NavBarWrap = styled.div`
   font-size: 27px;
   position: fixed;
   bottom: 0;
+  z-index: 2;
 
   .home {
     font-size: 37px;

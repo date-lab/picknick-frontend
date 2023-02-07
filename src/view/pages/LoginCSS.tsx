@@ -56,14 +56,11 @@ export const LogoImg2 = styled.img`
 export const KaKaoLoginWrap = styled.div`
   position: relative;
   bottom: 60px;
+  width: 100%;
+  text-align: center;
 `;
 
-export const KakaoLoginBtn = styled.div`
-  padding: 18px 150px;
-  background-color: #f8d534;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 20px;
-  color: #3b1e1e;
+export const KakaoLoginBtn = styled.img`
   cursor: pointer;
+  max-width: 300px;
 `;

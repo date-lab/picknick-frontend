@@ -9,6 +9,7 @@ export const SettingWrap = styled.div`
   padding: 0 25px;
   font-size: 23px;
   box-sizing: border-box;
+  z-index: 2;
 `;
 
 export const LocationBtnIcons = styled.span`

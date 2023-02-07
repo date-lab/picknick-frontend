@@ -8,6 +8,7 @@ export const SearchWrap = styled.div`
   margin-top: 20px;
   padding-right: 17px;
   box-sizing: border-box;
+  z-index: 2;
 `;
 
 export const SearchIcon = styled.span`

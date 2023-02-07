@@ -9,6 +9,7 @@ export const KeyWrodWrap = styled.div`
   align-items: center;
   padding-left: 20px;
   box-sizing: border-box;
+  z-index: 2;
 `;
 
 export const KeyWordItems = styled.div`

@@ -16,6 +16,7 @@
     "noEmit": true,
     "baseUrl": "./src",
     "jsx": "react-jsx",
+    "types": ["kakao.maps.d.ts"],
     "paths": {
       "@adapter/*": ["src/adapter/*"],
       "@domain/*": ["src/domain/*"],
