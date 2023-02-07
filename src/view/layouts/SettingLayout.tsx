@@ -1,19 +1,13 @@
-import { useState } from "react";
-
 import { TfiMenuAlt } from "react-icons/tfi";
 import { MdOutlineLocationSearching } from "react-icons/md";
 
 import { SettingWrap, LocationBtnIcons, MenuBtnIcons } from "./SettingLayoutCSS";
 
-const SettingLayout = () => {
-  const [location, setLocation] = useState<Boolean>(false);
-  const handleLocationSettingBtn = () => {
-    location ? setLocation(false) : setLocation(true);
-  };
+const SettingLayout = ({ getCurrentPosBtn }: any) => {
   return (
     <SettingWrap>
       <LocationBtnIcons>
-        <MdOutlineLocationSearching onClick={handleLocationSettingBtn} className={location ? "active" : ""} />
+        <MdOutlineLocationSearching onClick={getCurrentPosBtn} />
       </LocationBtnIcons>
       <MenuBtnIcons>
         <TfiMenuAlt />

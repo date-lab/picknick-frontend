@@ -25,7 +25,6 @@ const Home = () => {
       <SearchLayout />
       <KeyWordLayout />
       <MapLocation />
-      <SettingLayout />
       <NavBar />
     </HomeWrap>
   );
