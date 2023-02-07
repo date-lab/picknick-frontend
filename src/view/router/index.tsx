@@ -2,9 +2,10 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import KakaoRedirectHandler from "../pages/Auth/KakaoRedirectHandler";
 
 const Router = () => {
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState(false);
   return (
     <div>
       <BrowserRouter>
@@ -14,7 +15,7 @@ const Router = () => {
           </Routes>
         ) : (
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         )}
       </BrowserRouter>
