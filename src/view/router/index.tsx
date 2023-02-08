@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
-import KakaoRedirectHandler from "../pages/Auth/KakaoRedirectHandler";
+import KakaoPage from "../pages/KakaoPage";
 
 const Router = () => {
   const [login, setLogin] = useState(false);
@@ -15,7 +15,8 @@ const Router = () => {
           </Routes>
         ) : (
           <Routes>
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Login />} />
+            <Route path="/oauth/callback/kakao" element={<KakaoPage />} />
           </Routes>
         )}
       </BrowserRouter>
