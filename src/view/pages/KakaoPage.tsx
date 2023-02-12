@@ -9,7 +9,7 @@ const KakaoPage = () => {
 
   // throw는 모든정보를 catch error로 내보내기 때문에, error의 타입을 알수가 없음
 
-  if (token === null) return new Error("로그인 실패");
+  if (token === null) return <div>로그인안됨</div>;
 
   //Record Read Only
   const kakaoData: Record<string, string> = {
@@ -32,7 +32,7 @@ const KakaoPage = () => {
     .then((res) => res.json())
     .then((data) => {
       localStorage.setItem("kakao", data.access_token);
-      return path("/home");
+      return path("/");
     });
 
   return <></>;

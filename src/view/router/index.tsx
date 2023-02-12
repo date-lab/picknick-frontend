@@ -6,21 +6,18 @@ import { useEffect } from "react";
 
 const Router = () => {
   const login = localStorage.getItem("kakao");
-  useEffect(() => {
-    <Router />;
-  }, [login]);
+
   return (
     <div>
       <BrowserRouter>
         {login ? (
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
           </Routes>
         ) : (
           <Routes>
-            <Route path="/*" element={<Login />} />
             <Route path="/" element={<Login />} />
+            <Route path="/*" element={<Login />} />
             <Route path="/oauth/callback/kakao" element={<KakaoPage />} />
           </Routes>
         )}
