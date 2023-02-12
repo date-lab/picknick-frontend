@@ -7,18 +7,16 @@ const KakaoPage = () => {
   const url = new URL(window.location.href);
   const token = url.searchParams.get("code");
 
-  interface KakaoKeyType {
-    grant_type: string;
-    client_id: string;
-    redirect_uri: string;
-    code: string | null;
-  }
+  // throw는 모든정보를 catch error로 내보내기 때문에, error의 타입을 알수가 없음
 
-  const kakaoData = {
+  if (token === null) return new Error("로그인 실패");
+
+  //Record Read Only
+  const kakaoData: Record<string, string> = {
     grant_type: "authorization_code",
     client_id: REST_API_KEY,
     redirect_uri: REDIRECT_URI,
-    code: token,
+    code: token ? token : "",
   };
 
   const kakaoAPI = Object.keys(kakaoData)

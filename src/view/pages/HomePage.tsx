@@ -8,7 +8,6 @@ import MapLocation from "../components/MapLocation";
 // Layouts
 import NavBar from "../layouts/NavBarLayout";
 import SearchLayout from "../layouts/SearchLayout";
-import SettingLayout from "../layouts/SettingLayout";
 import KeyWordLayout from "../layouts/KeyWordLayout";
 
 const Home = () => {
