@@ -1,8 +1,7 @@
 import { useNavigate, useLocation } from "react-router-dom";
 
 const KakaoPage = () => {
-  const navi = useNavigate();
-  const location = useLocation();
+  const path = useNavigate();
   const REST_API_KEY = "736ee0de974dbdf16ba7d5e0586ddf3f";
   const REDIRECT_URI = "http://localhost:5173/oauth/callback/kakao";
   const url = new URL(window.location.href);
@@ -34,10 +33,10 @@ const KakaoPage = () => {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      localStorage.setItem("kakao", data.access_token);
+      return path("/home");
     });
 
-  console.log(token);
   return <></>;
 };
 
