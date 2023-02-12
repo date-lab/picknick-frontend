@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HomeWrap } from "../pages/HomeCSS";
+import { HomeWrap } from "./HomePageCSS";
 
 // Components
 import Splash from "../components/Splash";

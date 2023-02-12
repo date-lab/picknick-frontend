@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const KakaoPage = () => {
   const path = useNavigate();
@@ -14,7 +14,7 @@ const KakaoPage = () => {
     code: string | null;
   }
 
-  const kakaoData: KakaoKeyType = {
+  const kakaoData = {
     grant_type: "authorization_code",
     client_id: REST_API_KEY,
     redirect_uri: REDIRECT_URI,

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Login from "../pages/Login";
+import Home from "../pages/HomePage";
+import Login from "../pages/LoginPage";
 import KakaoPage from "../pages/KakaoPage";
 import { useEffect } from "react";
 
