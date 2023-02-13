@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import useStore from "../../store";
 
 const KakaoPage = () => {
   const path = useNavigate();
@@ -12,6 +13,7 @@ const KakaoPage = () => {
   if (token === null) return <div>로그인안됨</div>;
 
   //Record Read Only
+
   const kakaoData: Record<string, string> = {
     grant_type: "authorization_code",
     client_id: REST_API_KEY,
@@ -31,8 +33,10 @@ const KakaoPage = () => {
   })
     .then((res) => res.json())
     .then((data) => {
-      localStorage.setItem("kakao", data.access_token);
-      return path("/");
+      const { setLogged, key } = useStore();
+      setLogged(data.access.token);
+      console.log(key);
+      path("/");
     });
 
   return <></>;

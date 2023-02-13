@@ -15,10 +15,14 @@ const MapLocation = () => {
     console.log(map);
   }, []);
 
-  function locationLoadSuccess(pos: any) {
+  interface LocationCoordsType {
+    coords: { latitude: number; longitude: number };
+  }
+
+  function locationLoadSuccess(pos: LocationCoordsType) {
     // 현재 위치 받아오기
     const currentPos = new kakao.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-    console.log(pos.coords);
+    console.log(pos);
     // 지도 이동(기존 위치와 가깝다면 부드럽게 이동)
     map.panTo(currentPos);
 
@@ -26,9 +30,6 @@ const MapLocation = () => {
     const marker = new kakao.maps.Marker({
       position: currentPos,
     });
-
-    // 기존에 마커가 있다면 제거
-    // marker.setMap(null);
     marker.setMap(map);
   }
 

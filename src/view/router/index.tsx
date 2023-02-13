@@ -2,15 +2,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/HomePage";
 import Login from "../pages/LoginPage";
 import KakaoPage from "../pages/KakaoPage";
-import { useEffect } from "react";
+import useStore from "../../store";
 
 const Router = () => {
-  const login = localStorage.getItem("kakao");
+  const { keyName } = useStore();
 
   return (
     <div>
       <BrowserRouter>
-        {login ? (
+        {keyName ? (
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
