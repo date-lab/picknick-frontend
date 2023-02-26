@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import useStore from "../../store";
 
 const KakaoPage = () => {
   const path = useNavigate();
@@ -33,10 +32,7 @@ const KakaoPage = () => {
   })
     .then((res) => res.json())
     .then((data) => {
-      const { setLogged, key } = useStore();
-      setLogged(data.access.token);
-      console.log(key);
-      path("/");
+      localStorage.setItem("kakao-login", data.access_token);
     });
 
   return <></>;

@@ -1,16 +1,17 @@
+import { useState } from "react";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/HomePage";
 import Login from "../pages/LoginPage";
 import KakaoPage from "../pages/KakaoPage";
-import useStore from "../../store";
 
 const Router = () => {
-  const { keyName } = useStore();
+  const [login, setLogin] = useState(true);
 
   return (
     <div>
       <BrowserRouter>
-        {keyName ? (
+        {login ? (
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>

@@ -6,7 +6,7 @@ import { BsBookmarkFill } from "react-icons/bs";
 import { HiUser } from "react-icons/hi";
 
 const NavBar = () => {
-  const [type, setType] = useState<string>("");
+  const [type, setType] = useState<string>("home");
 
   return (
     <NavBarWrap>

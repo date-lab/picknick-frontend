@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const KeyWrodWrap = styled.div`
+export const KeyWordWrap = styled.div`
   width: 100%;
   height: 35px;
   position: absolute;
@@ -52,48 +52,6 @@ export const Surface = styled.div`
 
 export const SurfaceIcon = styled.span`
   position: relative;
-  bottom: 3px;
-  padding-left: 2px;
-`;
-
-export const Parking = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: grey;
-  font-size: 13px;
-  margin-right: 10px;
-  padding: 0 10px;
-  box-sizing: border-box;
-  border-radius: 16px;
-  background-color: white;
-  cursor: pointer;
-  white-space: nowrap;
-`;
-
-export const ParkingIcon = styled.span`
-  position: relative;
-  bottom: 3px;
-  padding-left: 2px;
-`;
-
-export const SideMenuFood = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: grey;
-  font-size: 13px;
-  margin-right: 10px;
-  padding: 0 10px;
-  box-sizing: border-box;
-  border-radius: 16px;
-  background-color: white;
-  cursor: pointer;
-  white-space: nowrap;
-`;
-
-export const SideMenuFoodIcon = styled.span`
-  position: relative;
-  bottom: 3px;
+  bottom: 2px;
   padding-left: 2px;
 `;

@@ -1,37 +1,25 @@
+import { useState } from "react";
 import { BsBookmarkFill } from "react-icons/bs";
 
-import { KeyWrodWrap, KeyWordItems, Bookmark, Surface, SurfaceIcon, Parking, ParkingIcon, SideMenuFood, SideMenuFoodIcon } from "./KeyWordLayouCSS";
+import keyword from "../../data";
+
+import { KeyWordWrap, KeyWordItems, Bookmark, Surface, SurfaceIcon } from "./KeyWordLayoutCSS";
 
 const KeyWordLayout = () => {
   return (
-    <KeyWrodWrap>
+    <KeyWordWrap>
       <KeyWordItems>
         <Bookmark>
           <BsBookmarkFill />
         </Bookmark>
-        <Surface>
-          포장온리<SurfaceIcon>🎁</SurfaceIcon>
-        </Surface>
-        <Parking>
-          주차가능<ParkingIcon>🚘</ParkingIcon>
-        </Parking>
-        <SideMenuFood>
-          디저트 맛집<SideMenuFoodIcon>🍰</SideMenuFoodIcon>
-        </SideMenuFood>
-        <SideMenuFood>
-          음료수 맛집<SideMenuFoodIcon>🍰</SideMenuFoodIcon>
-        </SideMenuFood>
-        <SideMenuFood>
-          칼국수 맛집<SideMenuFoodIcon>🍰</SideMenuFoodIcon>
-        </SideMenuFood>
-        <SideMenuFood>
-          탕수육 맛집<SideMenuFoodIcon>🍰</SideMenuFoodIcon>
-        </SideMenuFood>
-        <SideMenuFood>
-          개발자 맛집<SideMenuFoodIcon>🍰</SideMenuFoodIcon>
-        </SideMenuFood>
+        {keyword.map((data, i): any => (
+          <Surface key={i}>
+            {data.title}
+            <SurfaceIcon>{data.icons}</SurfaceIcon>
+          </Surface>
+        ))}
       </KeyWordItems>
-    </KeyWrodWrap>
+    </KeyWordWrap>
   );
 };
 
