@@ -1,15 +1,12 @@
-import BoardPresenter from 'adapter/src/presenters/Board'
-import SessionPresenter from 'adapter/src/presenters/Session'
+import CafePresenter from 'adapter/presenters/Cafe'
 import { IUseCases } from './useCases'
 
 export interface IPresenters {
-  session: SessionPresenter
-  board: BoardPresenter
+  cafe: CafePresenter
 }
 
 export default (useCases: IUseCases): IPresenters => {
   return {
-    session: new SessionPresenter(useCases.session),
-    board: new BoardPresenter(useCases.board)
+    cafe: new CafePresenter(useCases.cafe)
   }
 }
