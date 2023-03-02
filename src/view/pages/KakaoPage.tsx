@@ -1,6 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
-const KakaoPage = () => {
+interface LoginType {
+  setLoggedFunc: (login: string) => void;
+}
+
+const KakaoPage = (props: LoginType) => {
   const path = useNavigate();
   const REST_API_KEY = "736ee0de974dbdf16ba7d5e0586ddf3f";
   const REDIRECT_URI = "http://localhost:5173/oauth/callback/kakao";
@@ -32,7 +36,9 @@ const KakaoPage = () => {
   })
     .then((res) => res.json())
     .then((data) => {
-      localStorage.setItem("kakao-login", data.access_token);
+      props.setLoggedFunc("kakao-login");
+      sessionStorage.setItem("kakao-login", data.access_token);
+      return path("/");
     });
 
   return <></>;

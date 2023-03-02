@@ -6,7 +6,9 @@ import Login from "../pages/LoginPage";
 import KakaoPage from "../pages/KakaoPage";
 
 const Router = () => {
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState(sessionStorage.getItem("kakao-login"));
+
+  const setLoggedFunc = (login: string) => setLogin(login);
 
   return (
     <div>
@@ -19,7 +21,7 @@ const Router = () => {
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/*" element={<Login />} />
-            <Route path="/oauth/callback/kakao" element={<KakaoPage />} />
+            <Route path="/oauth/callback/kakao" element={<KakaoPage setLoggedFunc={setLoggedFunc} />} />
           </Routes>
         )}
       </BrowserRouter>
