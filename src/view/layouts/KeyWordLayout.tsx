@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { BsBookmarkFill } from "react-icons/bs";
 
-import keyword from "../../data";
+import keyword from "../../keyWord";
 
 import { KeyWordWrap, KeyWordItems, Bookmark, Surface, SurfaceIcon } from "./KeyWordLayoutCSS";
 
@@ -12,10 +11,10 @@ const KeyWordLayout = () => {
         <Bookmark>
           <BsBookmarkFill />
         </Bookmark>
-        {keyword.map((data, i): any => (
+        {keyword.map((keyword, i): any => (
           <Surface key={i}>
-            {data.title}
-            <SurfaceIcon>{data.icons}</SurfaceIcon>
+            {keyword.title}
+            <SurfaceIcon>{keyword.icons}</SurfaceIcon>
           </Surface>
         ))}
       </KeyWordItems>
