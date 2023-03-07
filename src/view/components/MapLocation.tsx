@@ -32,6 +32,7 @@ const MapLocation = () => {
     // 데이터가 정상적으로 받아왔을때 json.success 값은 true
     // 각 카페 위치(위도, 경도)는 json.data
     setCafeLongLat(json.data);
+    // 해당데이터 맵핑
     json.data.map((data: any, i: number) => {
       const markerPosition = new kakao.maps.LatLng(data.ca_lat, data.ca_long);
       const iwContent = `<div style="padding:5px;">${data.ca_name}</div>`; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
@@ -49,10 +50,16 @@ const MapLocation = () => {
         content: data.ca_name,
       });
 
+      let markerClick = 0;
       // 마커에 클릭이벤트를 등록합니다
       kakao.maps.event.addListener(marker, "click", function () {
         // 마커 위에 인포윈도우를 표시합니다
         infowindow.open(map, marker);
+        markerClick += 1;
+        if (markerClick >= 2) {
+          infowindow.close();
+          markerClick = 0;
+        }
 
         // 지도상에 표시된 마커클릭시 가운데로 이동
         map.panTo(markerPosition);
