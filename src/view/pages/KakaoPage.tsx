@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface LoginType {
@@ -11,9 +12,14 @@ const KakaoPage = (props: LoginType) => {
   const url = new URL(window.location.href);
   const token = url.searchParams.get("code");
 
-  // throw는 모든정보를 catch error로 내보내기 때문에, error의 타입을 알수가 없음
+  // 토큰 발급 후 해당 API로 유저 토큰 전송
+  const auth = async (accessToken: string) => {
+    const AUTH_API = `https://sj100700.cafe24.com/picknic/api/auth.php?access_token=${accessToken}`;
 
-  if (token === null) return <div>로그인안됨</div>;
+    await fetch(AUTH_API, {
+      method: "POST",
+    });
+  };
 
   //Record Read Only
 
@@ -38,6 +44,7 @@ const KakaoPage = (props: LoginType) => {
     .then((data) => {
       props.setLoggedFunc("kakao-login");
       sessionStorage.setItem("kakao-login", data.access_token);
+      auth(data.access_token);
       return path("/");
     });
 
