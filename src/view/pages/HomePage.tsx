@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HomeWrap } from "./HomePageCSS";
 
 // Components
@@ -13,9 +13,15 @@ import KeyWordLayout from "../layouts/KeyWordLayout";
 const Home = () => {
   const [splash, setSplash] = useState<boolean>(true);
 
-  setTimeout(() => {
-    setSplash(false);
-  }, 2000);
+  useEffect(() => {
+    const splashTimer = setTimeout(() => {
+      setSplash(false);
+    }, 2000);
+
+    return () => {
+      clearTimeout(splashTimer);
+    };
+  }, []);
 
   if (splash) return <Splash />;
 
